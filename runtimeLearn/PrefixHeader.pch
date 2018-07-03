@@ -1,0 +1,34 @@
+//
+//  PrefixHeader.pch
+//  runtimeLearn
+//
+//  Created by XieHenry on 2018/6/28.
+//  Copyright © 2018年 XieHenry. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#import "BaseViewController.h"
+#import <objc/message.h>
+#import <Masonry/Masonry.h>
+
+/**
+ @abstract 获取本机屏幕的宽度.   考虑到横屏的宽高比
+ **/
+static inline CGFloat SCREEN_WIDTH() {
+    return [UIScreen mainScreen].bounds.size.width > [UIScreen mainScreen].bounds.size.height ? [UIScreen mainScreen].bounds.size.width : [UIScreen mainScreen].bounds.size.height;
+}
+
+/**
+ @abstract 获取本机屏幕的高度.   考虑到横屏的宽高比
+ **/
+static inline CGFloat SCREEN_HEIGHT() {
+
+    return [UIScreen mainScreen].bounds.size.height > [UIScreen mainScreen].bounds.size.width ?
+    [UIScreen mainScreen].bounds.size.height : [UIScreen mainScreen].bounds.size.height;
+}
+
+
+#endif /* PrefixHeader_pch */
